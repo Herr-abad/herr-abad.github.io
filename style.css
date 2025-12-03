@@ -1,6 +1,6 @@
 /* Hero section */
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  background: linear-gradient(rgb(0, 4, 255, 0.6), rgba(1, 26, 217, 0.6)),
               url("2.jpg") center/cover no-repeat;
   height: 100vh;
 }
@@ -13,5 +13,20 @@
 
 #valores .card:hover {
   transform: translateY(-10px);
+}
+h1{
+  font-weight: bold;
+}
+p{
+  margin:0px;
+}
+.stronger{
+  background-color: #0000aa;
+  color:white;
+  font-weight: 600;
+  height: 50px;
+}
+.prim{
+  background-color: #0000dd;
 }
 
