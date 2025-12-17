@@ -1,3 +1,6 @@
 theme: herr-abad
 title: Herr Abad | docente de alemán e Informática
 # Esto fuerza a GitHub a usar Jekyll correctamente
+
+include: [_includes]
+incremental: false
