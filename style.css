@@ -5,22 +5,10 @@
   height: 82vh;
 }
 
-section{
-  height: 90vh;
-}
-
-/* Sección de valores */
-#valores .card {
-  border: none;
-  transition: transform 0.3s ease-in-out;
-}
-
-#valores .card:hover {
-  transform: translateY(-10px);
-}
 h1{
   font-weight: bold;
 }
+
 p{
   margin:0px;
 }
@@ -28,10 +16,9 @@ p{
   background-color: #0000aa;
   color:white;
   font-weight: 600;
-  height: 10vh;
 }
 .prim, section{
-  background-color: #0000dd;
+  background-color: #0281ff;
 }
 section{
   padding: 50px;
