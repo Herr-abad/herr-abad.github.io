@@ -181,6 +181,13 @@ Volver al curso
 
 </section>
 
+<script>
+  /* verificar login */
+
+  if(localStorage.getItem("cursoLogin") !== "true"){
+      window.location.href="/intranet";
+  }
+</script>
 
 
 {% include footer.html %}
