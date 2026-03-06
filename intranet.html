@@ -3,14 +3,6 @@
 
 {% include header.html %}
 
-<div style="text-align:center; margin-top:40px;">
-
-<a href="/examen-aleman-a1" class="btn-curso">
-Realizar examen del curso
-</a>
-
-</div>
-
 <!-- Login -->
 
 <section class="prim">
@@ -67,86 +59,82 @@ Realizar examen del curso
     </div>
   </div>
 
+  <div>
+    <a href="/examen-aleman-a1" class="btn-curso">Realizar examen del curso</a>
+  </div>
+  
+
 </section>
 
 
 
 <script>
 
-/* ===== login simple ===== */
-
-const user = "alumno";
-const pass = "123456";
-
-function login(){
-
-let u = document.getElementById("usuario").value;
-let p = document.getElementById("clave").value;
-
-if(u===user && p===pass){
-
-localStorage.setItem("cursoLogin","true");
-
-document.getElementById("login").style.display="none";
-document.getElementById("curso").style.display="block";
-
-}else{
-
-document.getElementById("error").innerText="Usuario o contraseña incorrectos";
-
-}
-
-}
-
-/* sesión persistente */
-
-if(localStorage.getItem("cursoLogin")=="true"){
-
-document.addEventListener("DOMContentLoaded",function(){
-
-document.getElementById("login").style.display="none";
-document.getElementById("curso").style.display="block";
-
-})
-
-}
-
-
-/* ===== bloqueo clic derecho ===== */
-
-document.addEventListener("contextmenu", event => event.preventDefault());
-
-
-/* ===== bloqueo F12 y devtools ===== */
-
-document.onkeydown=function(e){
-
-if(e.keyCode==123){return false;}
-
-if(e.ctrlKey && e.shiftKey && e.keyCode==73){return false;}
-
-if(e.ctrlKey && e.shiftKey && e.keyCode==74){return false;}
-
-if(e.ctrlKey && e.keyCode==85){return false;}
-
-}
-
-
-/* ===== detección devtools ===== */
-
-setInterval(function(){
-
-const devtoolsOpen = window.outerWidth - window.innerWidth > 160;
-
-if(devtoolsOpen){
-
-document.body.innerHTML="Acceso bloqueado";
-
-}
-
-},1000);
+  /* ===== login simple ===== */
+  
+  const user = "alumno";
+  const pass = "123456";
+  
+  function login(){
+  
+    let u = document.getElementById("usuario").value;
+    let p = document.getElementById("clave").value;
+    
+      if(u===user && p===pass){
+      
+      localStorage.setItem("cursoLogin","true");
+      
+      document.getElementById("login").style.display="none";
+      document.getElementById("curso").style.display="block";
+    
+      }else{
+      
+        document.getElementById("error").innerText="Usuario o contraseña incorrectos";
+      
+      }
+  }
+  
+  /* sesión persistente */
+  
+    if(localStorage.getItem("cursoLogin")=="true"){
+    
+      document.addEventListener("DOMContentLoaded",function(){
+      
+      document.getElementById("login").style.display="none";
+      document.getElementById("curso").style.display="block";
+    
+    })
+  
+  }
+  
+  
+  /* ===== bloqueo clic derecho ===== */
+  
+  document.addEventListener("contextmenu", event => event.preventDefault());
+  
+  /* ===== bloqueo F12 y devtools ===== */
+  
+  document.onkeydown=function(e){
+  
+    if(e.keyCode==123){return false;}
+    if(e.ctrlKey && e.shiftKey && e.keyCode==73){return false;}
+    if(e.ctrlKey && e.shiftKey && e.keyCode==74){return false;}
+    if(e.ctrlKey && e.keyCode==85){return false;}
+  
+  }
+  
+  
+    /* ===== detección devtools ===== */
+  
+    setInterval(function(){
+      const devtoolsOpen = window.outerWidth - window.innerWidth > 160;
+      if(devtoolsOpen){
+      document.body.innerHTML="Acceso bloqueado";
+    }
+  },1000);
 
 </script>
 
   
 {% include footer.html %}
+
