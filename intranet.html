@@ -3,27 +3,150 @@
 
 {% include header.html %}
 
+<div style="text-align:center; margin-top:40px;">
 
-  <!-- Sobre mí -->
-  <section id="sobre-mi">
-    <div class="container twt">
-      <div class="row align-items-center">
-        <div class="col-md-6">
-          <h2>Presentación</h2>
-          <p>
-            Soy una persona competitiva y comprometida con maximizar el desempeño de equipos mediante estándares de calidad  y efectividad, asegurando el éxito de nuestras metas. Mi experiencia incluye un voluntariado de dos años en Alemania,  donde fortalecí habilidades interculturales trabajando en proyectos de inclusión y sostenibilidad. He trabajado como  Director de Proyectos y Director de Marketing, liderando estrategias innovadoras en diversas organizaciones.  Actualmente, me desempeño en el Instituto Superior Tecnológico Privado María Elena Moyano, donde contribuyo al  desarrollo académico y organizacional. Soy adaptable, aprendo rápido y disfruto colaborar con personas diversas para  generar soluciones innovadoras en educación y sostenibilidad. 
-          </p>
-        </div>
-        <div class="col-md-6">
-          <img class="img-fluid rounded shadow" src="/images/ft/miguelabaddp.jpg" alt="Foto profesional">
+<a href="/examen-aleman-a1" class="btn-curso">
+Realizar examen del curso
+</a>
+
+</div>
+
+<!-- Login -->
+
+<section class="prim">
+  <div class="container">
+    <div id="login" class="login-box">
+      <h3>Acceso al curso</h3>
+      <input type="text" id="usuario" placeholder="Usuario">
+      <input type="password" id="clave" placeholder="Contraseña">
+      <button onclick="login()">Ingresar</button>
+      <p id="error" style="color:red; margin-top:10px;"></p>
+    </div>
+  </div>
+</section>
+
+<section id="curso">
+
+  <div class="container twt">
+    <h2 style="text-align:center; margin-bottom:40px;">Contenido del curso</h2>
+    
+    <div class="curso-grid">
+
+      <!-- Tema 1 -->
+      <div class="card-curso">
+        <img src="/images/ft/ban1.jfif" alt="Tema 1">
+        <div class="card-body">
+          <h4>Saludos en Aleman</h4>
+          <p>Aprende a Saludar correctamente en Alemán</p>
+          <a href="/cursos/leccion1.html" class="btn-curso">Ver lección</a>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Separador -->
-  <div class="navbar navbar-expand-lg navbar-dark stronger py-5">
-    <div class="container"></div>
+
+      <!-- Tema 2 -->
+      <div class="card-curso">
+      <img src="/images/ft/ban2.jpg" alt="Tema 2">
+        <div class="card-body">
+          <h4>Tema 2</h4>
+          <p>Conceptos fundamentales que necesitas dominar.</p>
+          <a href="/cursos/leccion2.html" class="btn-curso">Ver lección</a>
+        </div>
+      </div>
+
+
+      <!-- Tema 3 -->
+      <div class="card-curso">
+      <img src="/images/ft/ban3.jpg" alt="Tema 3">
+        <div class="card-body">
+          <h4>Tema 3</h4>
+          <p>Aplicaciones prácticas y ejercicios guiados.</p>
+          <a href="/cursos/leccion3.html" class="btn-curso">Ver lección</a>
+        </div>
+      </div>
+
+    </div>
   </div>
 
+</section>
+
+
+
+<script>
+
+/* ===== login simple ===== */
+
+const user = "alumno";
+const pass = "123456";
+
+function login(){
+
+let u = document.getElementById("usuario").value;
+let p = document.getElementById("clave").value;
+
+if(u===user && p===pass){
+
+localStorage.setItem("cursoLogin","true");
+
+document.getElementById("login").style.display="none";
+document.getElementById("curso").style.display="block";
+
+}else{
+
+document.getElementById("error").innerText="Usuario o contraseña incorrectos";
+
+}
+
+}
+
+/* sesión persistente */
+
+if(localStorage.getItem("cursoLogin")=="true"){
+
+document.addEventListener("DOMContentLoaded",function(){
+
+document.getElementById("login").style.display="none";
+document.getElementById("curso").style.display="block";
+
+})
+
+}
+
+
+/* ===== bloqueo clic derecho ===== */
+
+document.addEventListener("contextmenu", event => event.preventDefault());
+
+
+/* ===== bloqueo F12 y devtools ===== */
+
+document.onkeydown=function(e){
+
+if(e.keyCode==123){return false;}
+
+if(e.ctrlKey && e.shiftKey && e.keyCode==73){return false;}
+
+if(e.ctrlKey && e.shiftKey && e.keyCode==74){return false;}
+
+if(e.ctrlKey && e.keyCode==85){return false;}
+
+}
+
+
+/* ===== detección devtools ===== */
+
+setInterval(function(){
+
+const devtoolsOpen = window.outerWidth - window.innerWidth > 160;
+
+if(devtoolsOpen){
+
+document.body.innerHTML="Acceso bloqueado";
+
+}
+
+},1000);
+
+</script>
+
+  
 {% include footer.html %}

@@ -1,0 +1,62 @@
+---
+---
+
+{% include header.html %}
+
+<section>
+
+<div class="container twt">
+
+<div id="certificado" style="
+margin-top:40px;
+padding:60px;
+border:6px solid #0000aa;
+text-align:center;
+background:white;
+">
+
+<h1>Certificado de Finalización</h1>
+
+<p style="margin-top:30px;">Se certifica que</p>
+
+<h2 id="nombre"></h2>
+
+<p>ha completado satisfactoriamente el curso</p>
+
+<h3>Alemán A1 — Introducción al idioma alemán</h3>
+
+<p id="fecha" style="margin-top:30px;"></p>
+
+<p style="margin-top:40px;">Herr Abad — Plataforma educativa</p>
+
+<button onclick="window.print()" class="btn-curso" style="margin-top:30px;">
+Descargar / Imprimir certificado
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+function obtenerParametro(nombre){
+
+let params = new URLSearchParams(window.location.search)
+
+return params.get(nombre)
+
+}
+
+let nombre = obtenerParametro("nombre")
+
+let fecha = new Date().toLocaleDateString()
+
+document.getElementById("nombre").innerText = nombre
+
+document.getElementById("fecha").innerText = "Fecha: " + fecha
+
+</script>
+
+{% include footer.html %}
