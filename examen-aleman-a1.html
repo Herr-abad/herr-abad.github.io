@@ -1,0 +1,97 @@
+---
+---
+
+{% include header.html %}
+
+<section class="hero d-flex align-items-center">
+<div class="container text-center wt">
+
+<h1>Examen — Alemán A1</h1>
+<p>Evaluación básica del curso</p>
+
+</div>
+</section>
+
+<div class="navbar navbar-expand-lg navbar-dark stronger py-4">
+<div class="container"></div>
+</div>
+
+<section>
+
+<div class="container twt">
+
+<h2>Evaluación</h2>
+
+<form id="examen">
+
+<h3>1. ¿Cómo se dice "hola" en alemán?</h3>
+
+<label><input type="radio" name="p1" value="0"> Guten Morgen</label><br>
+<label><input type="radio" name="p1" value="1"> Hallo</label><br>
+<label><input type="radio" name="p1" value="0"> Gute Nacht</label>
+
+
+<h3 style="margin-top:30px;">2. ¿Qué significa "Wie heißen Sie?"</h3>
+
+<label><input type="radio" name="p2" value="1"> ¿Cómo se llama usted?</label><br>
+<label><input type="radio" name="p2" value="0"> ¿Dónde vive?</label><br>
+<label><input type="radio" name="p2" value="0"> ¿Cómo está?</label>
+
+
+<h3 style="margin-top:30px;">3. ¿Qué significa "die Sonne"?</h3>
+
+<label><input type="radio" name="p3" value="1"> El sol</label><br>
+<label><input type="radio" name="p3" value="0"> La lluvia</label><br>
+<label><input type="radio" name="p3" value="0"> La nube</label>
+
+
+<div style="margin-top:40px">
+
+<button type="button" class="btn-curso" onclick="corregirExamen()">
+Enviar examen
+</button>
+
+</div>
+
+</form>
+
+<div id="resultado" style="margin-top:40px;"></div>
+
+</div>
+
+</section>
+
+<script>
+
+function corregirExamen(){
+
+let total = 0
+
+document.querySelectorAll("#examen input:checked").forEach(el=>{
+total += parseInt(el.value)
+})
+
+if(total >= 3){
+
+let nombre = prompt("Ingrese su nombre completo para el certificado")
+
+if(nombre){
+
+let url = "certificado.html?nombre=" + encodeURIComponent(nombre)
+
+window.location.href = url
+
+}
+
+}else{
+
+document.getElementById("resultado").innerHTML =
+"<h3 style='color:red;'>No aprobó el examen. Intente nuevamente.</h3>"
+
+}
+
+}
+
+</script>
+
+{% include footer.html %}

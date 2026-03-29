@@ -33,23 +33,61 @@
   </nav>
 
 
+<section>
 
-  <!-- Sobre mí -->
-  <section id="sobre-mi">
-    <div class="container twt">
-      <div class="row align-items-center">
-        <div class="col-md-6">
-          <h2>Presentación</h2>
-          <p>
-            Soy una persona competitiva y comprometida con maximizar el desempeño de equipos mediante estándares de calidad  y efectividad, asegurando el éxito de nuestras metas. Mi experiencia incluye un voluntariado de dos años en Alemania,  donde fortalecí habilidades interculturales trabajando en proyectos de inclusión y sostenibilidad. He trabajado como  Director de Proyectos y Director de Marketing, liderando estrategias innovadoras en diversas organizaciones.  Actualmente, me desempeño en el Instituto Superior Tecnológico Privado María Elena Moyano, donde contribuyo al  desarrollo académico y organizacional. Soy adaptable, aprendo rápido y disfruto colaborar con personas diversas para  generar soluciones innovadoras en educación y sostenibilidad. 
-          </p>
-        </div>
-        <div class="col-md-6">
-          <img class="img-fluid rounded shadow" src="/images/ft/miguelabaddp.jpg" alt="Foto profesional">
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="container twt">
+
+<div id="certificado" style="
+margin-top:40px;
+padding:60px;
+border:6px solid #0000aa;
+text-align:center;
+background:white;
+">
+
+<h1>Certificado de Finalización</h1>
+
+<p style="margin-top:30px;">Se certifica que</p>
+
+<h2 id="nombre"></h2>
+
+<p>ha completado satisfactoriamente el curso</p>
+
+<h3>Alemán A1 — Introducción al idioma alemán</h3>
+
+<p id="fecha" style="margin-top:30px;"></p>
+
+<p style="margin-top:40px;">Herr Abad — Plataforma educativa</p>
+
+<button onclick="window.print()" class="btn-curso" style="margin-top:30px;">
+Descargar / Imprimir certificado
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+
+function obtenerParametro(nombre){
+
+let params = new URLSearchParams(window.location.search)
+
+return params.get(nombre)
+
+}
+
+let nombre = obtenerParametro("nombre")
+
+let fecha = new Date().toLocaleDateString()
+
+document.getElementById("nombre").innerText = nombre
+
+document.getElementById("fecha").innerText = "Fecha: " + fecha
+
+</script>
 
   <!-- Separador -->
   <div class="navbar navbar-expand-lg navbar-dark stronger py-5">
@@ -66,7 +104,6 @@
 
 </body>
 </html>
-
 
 
 
