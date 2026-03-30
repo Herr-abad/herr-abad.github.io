@@ -1,0 +1,355 @@
+/* Configuracion Inicial */
+
+p, h2, h3, h4, li, a{
+  font-family:helvetica-w01-light,helvetica-w02-light,sans-serif;
+  text-decoration: none;
+  margin:none;
+}
+h1{
+  font-weight: bold;
+}
+h2{
+  color:#0000aa;
+  font-weight: 700 !important;
+}
+h3{
+  color:#0281ff;
+  font-size:19px;
+  font-weight: 500 !important;
+}
+h4{
+  color:#00abad;
+  font-size:15px;
+  font-weight: 600 !important;
+}
+a, p{
+  color:#3d3d3d;
+}
+a:hover{
+  color:#00abad;
+}
+ul{
+  color:#00abad !important;
+  padding: 0px 0px 0px 30px !important;
+}
+span{
+  color:#3d3d3d !important;
+}
+
+.stronger{
+  background-color: #0000aa;
+  color:white;
+  font-weight: 600;
+}
+.prim, section{
+  background-color: #0281ff;
+}
+.grs{
+  background-color: rgb(220, 220, 200) !important;
+  height: -webkit-fill-available;
+}
+section, .pd{
+  padding: 50px;
+}
+.wt{
+  color:white !important;
+}
+.twt{
+  background: white;
+}
+.col-md-7{
+  padding: 80px;  
+}
+.col-md-4{
+  height: 35vh;
+}
+.col-md-2{
+  padding: 20px 0px 0px 20px;
+}
+
+.center{
+  position: absolute;   /* o fixed / relative según el caso */
+  z-index: 9999;
+  width: 90%;
+  margin-top:120px;
+}
+
+/* banner con Imagenes */
+.hero {
+  background: linear-gradient(rgb(0, 4, 255, 0.2), rgba(1, 26, 217, 0.0)),
+              url("/images/fondo.png") center/cover no-repeat;
+  height: 82vh;
+}
+
+.foter{
+  background: linear-gradient(rgb(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+              url("/images/ft/Volver.JPG") center/cover no-repeat;
+  height: -webkit-fill-available;
+  min-height: 650px;
+}
+.back-to-top{
+  border-radius: 100%;
+  float: right !important;
+}
+.der{
+  display: flex !important;
+  justify-content: flex-end !important; /* empuja el contenido a la derecha */
+}
+
+/* Secciones con imagenes */
+#presentacion{
+  background: url("/images/ft/foto-aliado.png") center/cover no-repeat;
+  height: -webkit-fill-available;
+  min-height: 500px;
+}
+#descripcion{
+  background: url("/images/ft/sustentacion.JPG") center/cover no-repeat;
+  height: -webkit-fill-available;
+  min-height: 500px;
+}
+#especialidades{
+  background: url("/images/ft/pantano.JPG") center/cover no-repeat;
+  height: -webkit-fill-available;
+  min-height: 500px;
+}
+#informacion{
+  background: url("/images/ft/reforestacion.jpg") center/cover no-repeat;
+  height: -webkit-fill-available;
+  min-height: 500px;
+}
+.lucy {
+  background:
+    url("/images/ft/fondo.jpg") center / cover no-repeat;
+  background-attachment: fixed;
+  height: 82vh;
+}
+.green {
+  background:
+    url("/images/ft/nubes.jpg") center / cover no-repeat;
+  background-attachment: fixed;
+  height: 60vh;
+}
+.foto {
+  background:
+    url("/images/ft/perfil.jpg") center / cover no-repeat;
+}
+.gal-1{
+  background: linear-gradient(rgb(0, 171, 173, 0.8), rgba(0, 171, 173, 0.8)),
+              url("/images/ft/jardin.jpg") center/cover no-repeat;
+  background-attachment: fixed;
+  height: 82vh;
+}
+.gal-2{
+  background: linear-gradient(rgb(0, 171, 173, 0.5), rgba(0, 171, 173, 0.5)),
+              url("/images/fondo/lagoenberlin.jpg") center/cover no-repeat;
+  background-attachment: fixed;
+  height: -webkit-fill-available;
+}
+.gal-3{
+  background: linear-gradient(rgb(0, 171, 173, 0.5), rgba(0, 171, 173, 0.5)),
+              url("/images/fondo/vinedoentrabentraback.jpg") center/cover no-repeat;
+  background-attachment: fixed;
+  height: 82vh;
+}
+.gal-txt{
+  background: linear-gradient(rgb(0, 4, 255, 0.8), rgba(1, 26, 217, 0.8));
+  padding: 30px;
+  text-align: center !important;
+}
+#manifiesto{
+  background: url("/images/ft/mamut.jpg") center/cover no-repeat;
+  height: -webkit-fill-available;
+  min-height: 500px;
+}
+#deco{
+  background: url("/images/ft/capillasantiagoapostol.jpg") center/cover no-repeat;
+  height: -webkit-fill-available;
+  min-height: 500px;
+}
+.icono{
+  height: fit-content;
+  width: 100px;
+}
+
+
+/* Hover dropdown SOLO en pantallas grandes */
+@media (min-width: 800px) {
+  .navbar .dropdown-menu {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .navbar .dropdown:hover > .dropdown-menu {
+    display: block;
+    opacity: 1;
+  }
+}
+
+/* Tabla */
+table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.td-1{
+  text-align: right;
+  padding: 8px;
+  width:25%;
+}
+.td-2{
+  border-left: 2px solid #0000dd;
+}
+.td-3{
+  padding: 8px;
+}
+
+
+.galeria-masonry {
+  column-width: 280px;
+  column-gap: 1.2rem;
+}
+
+.galeria-masonry img {
+  width: 100%;
+  display: block;
+  margin-bottom: 1.2rem;
+  break-inside: avoid;
+  border-radius: .5rem;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.galeria-masonry img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+}
+.galeria-item.oculto {
+  visibility: hidden;
+  height: 0;
+  margin-bottom: 0 !important;
+  overflow: hidden;
+}
+#curso {
+  display: none;
+}
+
+
+body{
+  user-select:none;
+}
+
+/* Login container */
+
+.login-box{
+  max-width:420px;
+  margin:auto;
+  margin-top:80px;
+  background:white;
+  padding:40px;
+  border-radius:10px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* inputs */
+
+.login-box input{
+  width:100%;
+  padding:12px;
+  margin-top:10px;
+  border-radius:6px;
+  border:1px solid #ccc;
+}
+
+/* button */
+
+.login-box button{
+  width:100%;
+  margin-top:20px;
+  padding:12px;
+  border:none;
+  border-radius:6px;
+  background:#0000aa;
+  color:white;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.login-box button:hover{
+  background:#0015ff;
+}
+
+/* curso */
+
+#curso{
+  display:none;
+}
+
+/* tarjetas */
+
+.card-curso{
+  background:white;
+  border-radius:10px;
+  padding:30px;
+  margin-bottom:20px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* grid */
+
+.curso-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+/* tarjeta */
+
+.card-curso{
+  background:white;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  transition:0.3s;
+}
+
+.card-curso:hover{
+  transform:translateY(-8px);
+  box-shadow:0 18px 40px rgba(0,0,0,0.25);
+}
+
+/* imagen */
+
+.card-curso img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+/* cuerpo */
+
+.card-body{
+  padding:20px;
+}
+
+.card-body h4{
+  margin-bottom:10px;
+  font-weight:bold;
+}
+
+/* boton */
+
+.btn-curso{
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 18px;
+  background:#0000aa;
+  color:white;
+  text-decoration:none;
+  border-radius:6px;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.btn-curso:hover{
+  background:#0033ff;
+}

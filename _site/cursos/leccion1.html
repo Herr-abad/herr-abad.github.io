@@ -7,21 +7,66 @@
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- CSS personalizado -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <!-- Navbar -->
+  
   <nav class="navbar navbar-expand-lg navbar-dark prim">
     <div class="container">
       <a class="navbar-brand" href="/">
         <h1>Herr Abad</h1>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#menu" aria-controls="menu"
+              aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link wt" href="/intranet">Intranet</a></li>
+
+          <!--no Dropdown -->
+          <li class="nav-item ">
+            <a class="nav-link  wt"
+              href="/uber-mich.html"
+              role="button"
+              aria-expanded="false">
+              Über mich
+            </a>
+          </li>
+
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle wt"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Niveaus
+            </a>
+
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/niveaus/A1.html">A1 - Anfänger</a></li>
+                <li><a class="dropdown-item" href="/niveaus/A2.html">A2 - Grundstufe</a></li>
+                <li><a class="dropdown-item" href="/niveaus/B1.html">B1 - Mittelstufe</a></li>
+                <li><a class="dropdown-item" href="/niveaus/B2.html">B2 - Fortgeschritten</a></li>
+              </ul>
+
+          </li>
+
+          <!-- no Dropdown -->
+          <li class="nav-item ">
+            <a class="nav-link -toggle wt"
+              href="/intranet.html"
+              role="button"
+              aria-expanded="false">
+              Intranet
+            </a>
+
+          </li>
+
         </ul>
       </div>
     </div>
@@ -29,204 +74,156 @@
 
   <!-- Navbar 2 -->
   <nav class="navbar navbar-expand-lg navbar-dark stronger py-4">
-    <div class="container"><p>Deutsch- und Informatiklehrer</p></div>
+    <div class="container"><a class="wt" href="/">Deutsch- und Informatiklehrer</a></div>
   </nav>
 
 
+<!-- CONTENIDO DEL CURSO -->
+<section class="py-5">
+  <div class="container twt">
 
-<!-- HERO DEL CURSO -->
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
 
-<section class="hero d-flex align-items-center">
+          <!-- Separador 2-->
+          <div class="navbar navbar-expand-lg navbar-dark py-5">
+            <div class="container">
+            </div>
+          </div>
 
-<div class="container text-center wt">
+        <h2 class="mb-4">Clase 1 — Saludos y Presentación Personal</h2>
 
-<h1>Alemán A1 desde Cero</h1>
+        <!-- VIDEO -->
+        <div class="mb-5">
+          <div class="ratio ratio-16x9 rounded overflow-hidden">
+            <iframe src="https://www.youtube.com/embed/WyuxGOAGH2w" allowfullscreen></iframe>
+          </div>
+        </div>
 
-<p style="font-size:22px; margin-top:15px;">
-Saludos y Presentación Personal (Formal e Informal)
-</p>
+        <!-- DESCRIPCIÓN -->
+        <h3 class="mb-3">Descripción de la clase</h3>
+        <p>
+          En esta clase de Alemán A1 aprenderás los saludos formales e informales más utilizados en alemán y cómo realizar una presentación personal básica desde cero.
+        </p>
+        <p class="mb-4">
+          Trabajamos pronunciación, estructura gramatical inicial y uso contextual de expresiones frecuentes para que puedas comunicarte correctamente desde las primeras etapas del aprendizaje.
+        </p>
 
-</div>
+        <!-- PARA QUIÉN ES -->
+        <h3 class="mt-5 mb-3">Contenido ideal para</h3>
+        <ul class="mb-4">
+          <li>Estudiantes principiantes (nivel A1)</li>
+          <li>Personas que desean estudiar o trabajar en Alemania</li>
+          <li>Autodidactas que buscan una explicación clara y estructurada</li>
+        </ul>
 
+        <!-- VOCABULARIO -->
+        <h3 class="mt-5 mb-4">Expresiones importantes</h3>
+
+        <div class="row g-4">
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 text-center">
+              <div class="card-body">
+                <h5>Hallo</h5>
+                <p>Hola (saludo informal)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 text-center">
+              <div class="card-body">
+                <h5>Guten Tag</h5>
+                <p>Buenos días / Buen día (formal)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 text-center">
+              <div class="card-body">
+                <h5>Ich heiße...</h5>
+                <p>Me llamo...</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 text-center">
+              <div class="card-body">
+                <h5>Wie heißen Sie?</h5>
+                <p>¿Cómo se llama usted?</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        
+        <!-- BOTONES -->
+        <div class="text-center mt-5">
+          <a href="/intranet.html" class="btn btn-primary btn-lg">
+            Volver al curso
+          </a>
+        </div>
+
+        <br>
+
+      </div>
+    </div>
+
+  </div>
 </section>
-
 
 <!-- Separador -->
-<div class="navbar navbar-expand-lg navbar-dark stronger py-4">
-<div class="container"></div>
-</div>
-
-
-
-<!-- CONTENIDO DEL CURSO -->
-
-<section>
-
-<div class="container twt">
-
-<h2 style="margin-bottom:25px;">
-Clase 1 — Saludos y Presentación Personal
-</h2>
-
-
-<!-- VIDEO -->
-
-<div style="margin-bottom:40px;">
-
-<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:10px;">
-
-<iframe 
-src="https://www.youtube.com/embed/WyuxGOAGH2w"
-style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"
-allowfullscreen>
-</iframe>
-
-</div>
-
-</div>
-
-
-
-<!-- DESCRIPCION -->
-
-<h3>Descripción de la clase</h3>
-
-<p style="margin-top:15px; line-height:1.7;">
-En esta clase de Alemán A1 aprenderás los saludos formales e informales más utilizados en alemán 
-y cómo realizar una presentación personal básica desde cero.
-</p>
-
-<p style="margin-top:15px; line-height:1.7;">
-Trabajamos pronunciación, estructura gramatical inicial y uso contextual de expresiones frecuentes 
-para que puedas comunicarte correctamente desde las primeras etapas del aprendizaje.
-</p>
-
-
-
-<!-- PARA QUIEN ES -->
-
-<h3 style="margin-top:35px;">Contenido ideal para</h3>
-
-<ul style="margin-top:15px; line-height:1.8;">
-
-<li>Estudiantes principiantes (nivel A1)</li>
-
-<li>Personas que desean estudiar o trabajar en Alemania</li>
-
-<li>Autodidactas que buscan una explicación clara y estructurada</li>
-
-</ul>
-
-
-
-<!-- VOCABULARIO -->
-
-<h3 style="margin-top:35px;">Expresiones importantes</h3>
-
-<div class="curso-grid" style="margin-top:20px;">
-
-<div class="card-curso">
-
-<div class="card-body">
-
-<h4>Hallo</h4>
-
-<p>Hola (saludo informal)</p>
-
-</div>
-
-</div>
-
-
-<div class="card-curso">
-
-<div class="card-body">
-
-<h4>Guten Tag</h4>
-
-<p>Buenos días / Buen día (formal)</p>
-
-</div>
-
-</div>
-
-
-<div class="card-curso">
-
-<div class="card-body">
-
-<h4>Ich heiße...</h4>
-
-<p>Me llamo...</p>
-
-</div>
-
-</div>
-
-
-<div class="card-curso">
-
-<div class="card-body">
-
-<h4>Wie heißen Sie?</h4>
-
-<p>¿Cómo se llama usted?</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- FRASE PEDAGOGICA -->
-
-<div style="margin-top:40px; padding:25px; background:#0281ff; color:white; border-radius:8px;">
-
-<p style="font-size:18px; line-height:1.6;">
-
-Aprender alemán no es memorizar frases:  
-es comprender cómo funciona el idioma y aplicarlo con lógica.
-
-</p>
-
-</div>
-
-
-
-<!-- BOTONES -->
-
-<div style="margin-top:40px; text-align:center;">
-
-<a href="/intranet.html" class="btn-curso">
-Volver al curso
-</a>
-
-</div>
-
-
-
-</div>
-
-</section>
-
-
-  <!-- Separador -->
   <div class="navbar navbar-expand-lg navbar-dark stronger py-5">
     <div class="container"></div>
   </div>
 
   <!-- Footer -->
-  <footer class="prim text-light text-center py-4">
-    <p class="mb-0">© 2025 Herr Abad | Todos los derechos reservados</p>
-  </footer>
+   <div class="container-fluid">
+    <div class="row align-items-center">
+    <div class="col-md-7 foter text-light d-flex align-items-center"></div>
+    <div class="col-md-2">
+        <h3>Herr Abad</h3>
+        <a href="/"><p>Startsite</p></a>
+        <a href="/uber-mich.html"><p>Über mich</p></a>
+        
+        <br><br>
+
+        <h3>Niveaus</h3>
+        <a href="/niveaus/a1.html"><p>A1 - Anfänger</p></a>
+        <a href="/niveaus/a2.html"><p>A2 - Grundstufe</p></a>
+        <a href="/niveaus/b1.html"><p>B1 - Mittelstufe</p></a>
+        <a href="/niveaus/b2.html"><p>B2 - Fortgeschritten</p></a>
+
+    </div>
+    <div class="col-md-3">
+              
+        <h3>Werkzeug</h3>
+        <a href="/intranet.html"><p>Intranet</p></a>
+        <a href="https://www.youtube.com/@herr-Abad"><p>Youtube</p></a>
+
+    </div>
+  </div>
+   </div>
+  
+
+
+  <!-- Separador -->
+  <div class="navbar navbar-expand-lg navbar-dark stronger py-3 der">
+    <div class="container der">
+      <a href="#top" class="btn btn-primary back-to-top" title="Volver arriba"> ↑ </a>
+    </div>
+  </div>
+  
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
+
 
 
 

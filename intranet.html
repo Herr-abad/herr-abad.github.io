@@ -26,7 +26,7 @@
 
       <!-- Tema 1 -->
       <div class="card-curso">
-        <img src="/images/ft/ban1.jfif" alt="Tema 1">
+        <img src="/images/ft/fondo.jpg" alt="Tema 1">
         <div class="card-body">
           <h4>Saludos en Aleman</h4>
           <p>Aprende a Saludar correctamente en Alemán</p>
@@ -37,7 +37,7 @@
 
       <!-- Tema 2 -->
       <div class="card-curso">
-      <img src="/images/ft/ban2.jpg" alt="Tema 2">
+      <img src="/images/ft/fondo.jpg" alt="Tema 2">
         <div class="card-body">
           <h4>Tema 2</h4>
           <p>Conceptos fundamentales que necesitas dominar.</p>
@@ -48,7 +48,7 @@
 
       <!-- Tema 3 -->
       <div class="card-curso">
-      <img src="/images/ft/ban3.jpg" alt="Tema 3">
+      <img src="/images/ft/fondo.jpg" alt="Tema 3">
         <div class="card-body">
           <h4>Tema 3</h4>
           <p>Aplicaciones prácticas y ejercicios guiados.</p>
@@ -59,9 +59,9 @@
     </div>
   </div>
 
-  <div>
-    <a href="/examen-aleman-a1" class="btn-curso">Realizar examen del curso</a>
-  </div>
+ <div class="container" style="text-align:center; margin-top:30px;">
+  <a href="/examen-aleman-a1" class="btn-curso">Realizar examen del curso</a>
+</div>
   
 
 </section>
@@ -70,71 +70,54 @@
 
 <script>
 
-  /* ===== login simple ===== */
-  
-  const user = "alumno";
-  const pass = "123456";
-  
-  function login(){
-  
-    let u = document.getElementById("usuario").value;
-    let p = document.getElementById("clave").value;
-    
-      if(u===user && p===pass){
-      
-      localStorage.setItem("cursoLogin","true");
-      
-      document.getElementById("login").style.display="none";
-      document.getElementById("curso").style.display="block";
-    
-      }else{
-      
-        document.getElementById("error").innerText="Usuario o contraseña incorrectos";
-      
-      }
+const user = "alumno";
+const pass = "123456";
+
+function login(){
+
+  let u = document.getElementById("usuario").value;
+  let p = document.getElementById("clave").value;
+
+  if(u===user && p===pass){
+
+    localStorage.setItem("cursoLogin","true");
+
+    document.getElementById("login").style.display="none";
+    document.getElementById("curso").style.display="block";
+
+  }else{
+    document.getElementById("error").innerText="Usuario o contraseña incorrectos";
   }
-  
-  /* sesión persistente */
-  
-    if(localStorage.getItem("cursoLogin")=="true"){
-    
-      document.addEventListener("DOMContentLoaded",function(){
-      
-      document.getElementById("login").style.display="none";
-      document.getElementById("curso").style.display="block";
-    
-    })
-  
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+
+  if(localStorage.getItem("cursoLogin")=="true"){
+    document.getElementById("login").style.display="none";
+    document.getElementById("curso").style.display="block";
   }
-  
-  
-  /* ===== bloqueo clic derecho ===== */
-  
-  document.addEventListener("contextmenu", event => event.preventDefault());
-  
-  /* ===== bloqueo F12 y devtools ===== */
-  
-  document.onkeydown=function(e){
-  
-    if(e.keyCode==123){return false;}
-    if(e.ctrlKey && e.shiftKey && e.keyCode==73){return false;}
-    if(e.ctrlKey && e.shiftKey && e.keyCode==74){return false;}
-    if(e.ctrlKey && e.keyCode==85){return false;}
-  
+
+});
+
+/* bloquear clic derecho */
+document.addEventListener("contextmenu", event => event.preventDefault());
+
+/* bloquear teclas */
+document.onkeydown=function(e){
+  if(e.keyCode==123){return false;}
+  if(e.ctrlKey && e.shiftKey && e.keyCode==73){return false;}
+  if(e.ctrlKey && e.shiftKey && e.keyCode==74){return false;}
+  if(e.ctrlKey && e.keyCode==85){return false;}
+}
+
+/* ⚠️ quitar destrucción del DOM */
+setInterval(function(){
+  const devtoolsOpen = window.outerWidth - window.innerWidth > 160;
+  if(devtoolsOpen){
+    console.log("Devtools detectado");
   }
-  
-  
-    /* ===== detección devtools ===== */
-  
-    setInterval(function(){
-      const devtoolsOpen = window.outerWidth - window.innerWidth > 160;
-      if(devtoolsOpen){
-      document.body.innerHTML="Acceso bloqueado";
-    }
-  },1000);
+},1000);
 
 </script>
-
   
 {% include footer.html %}
-

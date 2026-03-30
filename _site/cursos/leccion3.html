@@ -7,21 +7,66 @@
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- CSS personalizado -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <!-- Navbar -->
+  
   <nav class="navbar navbar-expand-lg navbar-dark prim">
     <div class="container">
       <a class="navbar-brand" href="/">
         <h1>Herr Abad</h1>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#menu" aria-controls="menu"
+              aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link wt" href="/intranet">Intranet</a></li>
+
+          <!--no Dropdown -->
+          <li class="nav-item ">
+            <a class="nav-link  wt"
+              href="/uber-mich.html"
+              role="button"
+              aria-expanded="false">
+              Über mich
+            </a>
+          </li>
+
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle wt"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Niveaus
+            </a>
+
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/niveaus/A1.html">A1 - Anfänger</a></li>
+                <li><a class="dropdown-item" href="/niveaus/A2.html">A2 - Grundstufe</a></li>
+                <li><a class="dropdown-item" href="/niveaus/B1.html">B1 - Mittelstufe</a></li>
+                <li><a class="dropdown-item" href="/niveaus/B2.html">B2 - Fortgeschritten</a></li>
+              </ul>
+
+          </li>
+
+          <!-- no Dropdown -->
+          <li class="nav-item ">
+            <a class="nav-link -toggle wt"
+              href="/intranet.html"
+              role="button"
+              aria-expanded="false">
+              Intranet
+            </a>
+
+          </li>
+
         </ul>
       </div>
     </div>
@@ -29,250 +74,227 @@
 
   <!-- Navbar 2 -->
   <nav class="navbar navbar-expand-lg navbar-dark stronger py-4">
-    <div class="container"><p>Deutsch- und Informatiklehrer</p></div>
+    <div class="container"><a class="wt" href="/">Deutsch- und Informatiklehrer</a></div>
   </nav>
 
 
+<!-- CONTENIDO DEL CURSO -->
+<section class="py-5">
+  <div class="container twt">
 
-<!-- HERO DEL CURSO -->
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
 
-<section class="hero d-flex align-items-center">
+        <!-- Separador -->
+        <div class="navbar navbar-expand-lg navbar-dark py-5">
+          <div class="container"></div>
+        </div>
 
-<div class="container text-center wt">
+        <h2 class="mb-4">Clase — Poesía en Alemán (Nivel A2)</h2>
 
-<h1>Alemán A2 — Literatura y Comprensión</h1>
+        <!-- VIDEO -->
+        <div class="mb-5">
+          <div class="ratio ratio-16x9 rounded overflow-hidden">
+            <iframe src="https://www.youtube.com/embed/os0CmEL8V1U" allowfullscreen></iframe>
+          </div>
+        </div>
 
-<p style="font-size:22px; margin-top:15px;">
-Heute Nacht schreibe ich traurige Zeilen
-</p>
+        <!-- DESCRIPCIÓN -->
+        <h3 class="mb-3">Descripción de la clase</h3>
+        <p>
+          En esta lección se presenta una versión libre en alemán de nivel A2 inspirada en un clásico de la poesía latinoamericana.
+        </p>
+        <p>
+          El texto combina vocabulario accesible con imágenes poéticas sencillas, permitiendo disfrutar de la literatura mientras se fortalece la comprensión del idioma alemán.
+        </p>
+        <p class="mb-4">
+          La narración se desarrolla de forma pausada y clara, transmitiendo la emoción del poema sin perder precisión lingüística.
+        </p>
 
-</div>
+        <!-- PARA QUIÉN ES -->
+        <h3 class="mt-5 mb-3">Contenido ideal para</h3>
+        <ul class="mb-4">
+          <li>Estudiantes de alemán nivel A2</li>
+          <li>Personas interesadas en literatura en idioma alemán</li>
+          <li>Estudiantes que desean mejorar la comprensión auditiva</li>
+          <li>Quienes buscan ampliar vocabulario emocional y descriptivo</li>
+        </ul>
 
+        <!-- VOCABULARIO -->
+        <h3 class="mt-5 mb-4">Vocabulario emocional</h3>
+
+        <div class="row g-4">
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 text-center">
+              <div class="card-body">
+                <h5>die Nacht 🌙</h5>
+                <p>La noche</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 text-center">
+              <div class="card-body">
+                <h5>die Traurigkeit</h5>
+                <p>La tristeza</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 text-center">
+              <div class="card-body">
+                <h5>die Erinnerung</h5>
+                <p>El recuerdo</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 text-center">
+              <div class="card-body">
+                <h5>der Gedanke</h5>
+                <p>El pensamiento</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 text-center">
+              <div class="card-body">
+                <h5>die Stille</h5>
+                <p>El silencio</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 text-center">
+              <div class="card-body">
+                <h5>der Himmel</h5>
+                <p>El cielo</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- FRASES -->
+        <h3 class="mt-5 mb-4">Expresiones poéticas</h3>
+
+        <div class="row g-4">
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 text-center">
+              <div class="card-body">
+                <h5>Heute Nacht</h5>
+                <p>Esta noche</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 text-center">
+              <div class="card-body">
+                <h5>traurige Zeilen</h5>
+                <p>versos tristes</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 text-center">
+              <div class="card-body">
+                <h5>ich erinnere mich</h5>
+                <p>yo recuerdo</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 text-center">
+              <div class="card-body">
+                <h5>die stille Nacht</h5>
+                <p>la noche silenciosa</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- FRASE PEDAGÓGICA -->
+        <div class="mt-5 p-4 text-white rounded text-center" style="background:#0281ff;">
+          <p class="mb-0 fs-5">
+            La literatura permite aprender un idioma desde una dimensión diferente:<br>
+            no solo comprender palabras, sino también emociones, ritmo y significado.
+          </p>
+        </div>
+
+        <!-- BOTONES -->
+        <div class="text-center mt-5">
+          <a href="/intranet.html" class="btn btn-primary btn-lg">
+            Volver al curso
+          </a>
+        </div>
+
+        <br>
+
+      </div>
+    </div>
+
+  </div>
 </section>
-
 
 <!-- Separador -->
-<div class="navbar navbar-expand-lg navbar-dark stronger py-4">
-<div class="container"></div>
-</div>
-
-
-
-<!-- CONTENIDO DEL CURSO -->
-
-<section>
-
-<div class="container twt">
-
-<h2 style="margin-bottom:25px;">
-Clase — Poesía en Alemán (Nivel A2)
-</h2>
-
-
-<!-- VIDEO -->
-
-<div style="margin-bottom:40px;">
-
-<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:10px;">
-
-<iframe 
-src="https://www.youtube.com/embed/os0CmEL8V1U"
-style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"
-allowfullscreen>
-</iframe>
-
-</div>
-
-</div>
-
-
-
-<!-- DESCRIPCION -->
-
-<h3>Descripción de la clase</h3>
-
-<p style="margin-top:15px; line-height:1.7;">
-En esta lección te presento una versión libre en alemán de nivel A2 inspirada en un clásico de la poesía latinoamericana.
-</p>
-
-<p style="margin-top:15px; line-height:1.7;">
-El texto combina vocabulario accesible con imágenes poéticas sencillas, permitiendo disfrutar de la literatura mientras fortaleces tu comprensión del idioma alemán.
-</p>
-
-<p style="margin-top:15px; line-height:1.7;">
-La narración está realizada de forma pausada y clara, buscando transmitir la emoción del poema sin perder claridad lingüística.
-</p>
-
-
-
-<!-- PARA QUIEN ES -->
-
-<h3 style="margin-top:35px;">Contenido ideal para</h3>
-
-<ul style="margin-top:15px; line-height:1.8;">
-
-<li>Estudiantes de alemán nivel A2</li>
-
-<li>Personas interesadas en literatura en idioma alemán</li>
-
-<li>Estudiantes que desean mejorar comprensión auditiva</li>
-
-<li>Quienes buscan ampliar vocabulario emocional y descriptivo</li>
-
-</ul>
-
-
-
-<!-- VOCABULARIO -->
-
-<h3 style="margin-top:35px;">Vocabulario emocional</h3>
-
-<div class="curso-grid" style="margin-top:20px;">
-
-
-<div class="card-curso">
-<div class="card-body">
-<h4>die Nacht 🌙</h4>
-<p>La noche</p>
-</div>
-</div>
-
-
-<div class="card-curso">
-<div class="card-body">
-<h4>die Traurigkeit</h4>
-<p>La tristeza</p>
-</div>
-</div>
-
-
-<div class="card-curso">
-<div class="card-body">
-<h4>die Erinnerung</h4>
-<p>El recuerdo</p>
-</div>
-</div>
-
-
-<div class="card-curso">
-<div class="card-body">
-<h4>der Gedanke</h4>
-<p>El pensamiento</p>
-</div>
-</div>
-
-
-<div class="card-curso">
-<div class="card-body">
-<h4>die Stille</h4>
-<p>El silencio</p>
-</div>
-</div>
-
-
-<div class="card-curso">
-<div class="card-body">
-<h4>der Himmel</h4>
-<p>El cielo</p>
-</div>
-</div>
-
-
-</div>
-
-
-
-<!-- FRASES DEL TEXTO -->
-
-<h3 style="margin-top:40px;">Expresiones poéticas</h3>
-
-<div class="curso-grid" style="margin-top:20px;">
-
-
-<div class="card-curso">
-<div class="card-body">
-<h4>Heute Nacht</h4>
-<p>Esta noche</p>
-</div>
-</div>
-
-
-<div class="card-curso">
-<div class="card-body">
-<h4>traurige Zeilen</h4>
-<p>versos tristes</p>
-</div>
-</div>
-
-
-<div class="card-curso">
-<div class="card-body">
-<h4>ich erinnere mich</h4>
-<p>yo recuerdo</p>
-</div>
-</div>
-
-
-<div class="card-curso">
-<div class="card-body">
-<h4>die stille Nacht</h4>
-<p>la noche silenciosa</p>
-</div>
-</div>
-
-
-</div>
-
-
-
-<!-- FRASE PEDAGOGICA -->
-
-<div style="margin-top:40px; padding:25px; background:#0281ff; color:white; border-radius:8px;">
-
-<p style="font-size:18px; line-height:1.6;">
-
-La literatura permite aprender un idioma desde una dimensión diferente:  
-no solo comprender palabras, sino también emociones, ritmo y significado.
-
-</p>
-
-</div>
-
-
-
-<!-- BOTONES -->
-
-<div style="margin-top:40px; text-align:center;">
-
-<a href="/intranet.html" class="btn-curso">
-Volver al curso
-</a>
-
-</div>
-
-
-
-</div>
-
-</section>
-
-
-
-  <!-- Separador -->
   <div class="navbar navbar-expand-lg navbar-dark stronger py-5">
     <div class="container"></div>
   </div>
 
   <!-- Footer -->
-  <footer class="prim text-light text-center py-4">
-    <p class="mb-0">© 2025 Herr Abad | Todos los derechos reservados</p>
-  </footer>
+   <div class="container-fluid">
+    <div class="row align-items-center">
+    <div class="col-md-7 foter text-light d-flex align-items-center"></div>
+    <div class="col-md-2">
+        <h3>Herr Abad</h3>
+        <a href="/"><p>Startsite</p></a>
+        <a href="/uber-mich.html"><p>Über mich</p></a>
+        
+        <br><br>
+
+        <h3>Niveaus</h3>
+        <a href="/niveaus/a1.html"><p>A1 - Anfänger</p></a>
+        <a href="/niveaus/a2.html"><p>A2 - Grundstufe</p></a>
+        <a href="/niveaus/b1.html"><p>B1 - Mittelstufe</p></a>
+        <a href="/niveaus/b2.html"><p>B2 - Fortgeschritten</p></a>
+
+    </div>
+    <div class="col-md-3">
+              
+        <h3>Werkzeug</h3>
+        <a href="/intranet.html"><p>Intranet</p></a>
+        <a href="https://www.youtube.com/@herr-Abad"><p>Youtube</p></a>
+
+    </div>
+  </div>
+   </div>
+  
+
+
+  <!-- Separador -->
+  <div class="navbar navbar-expand-lg navbar-dark stronger py-3 der">
+    <div class="container der">
+      <a href="#top" class="btn btn-primary back-to-top" title="Volver arriba"> ↑ </a>
+    </div>
+  </div>
+  
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
+
 
 
 
